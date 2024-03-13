@@ -22,7 +22,7 @@ function NavbarApp() {
   }, [dispatch])
   useEffect(() => {
     dispatch(getCartTotal())
-  }, [carts])
+  }, [carts,dispatch])
   return (
     <>
       {/* <Navbar> */}
