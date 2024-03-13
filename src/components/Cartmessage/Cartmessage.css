@@ -1,0 +1,15 @@
+.cart-msg {
+  background-color: rgba(0, 0, 0, 0.537);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 35%;
+  height: 35%;
+  border-radius: 5px;
+}
+
+.msg-icon {
+  width: 50px;
+  padding: 10px;
+}

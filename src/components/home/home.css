@@ -1,0 +1,16 @@
+.main-title {
+  width: 100%;
+  padding: 25px 50px;
+  box-shadow: 0 0 20px 6px #d9d6d6;
+  position: relative;
+}
+
+.main-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background-color: orangered;
+}

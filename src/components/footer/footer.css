@@ -1,0 +1,14 @@
+footer {
+  background-color: orangered;
+  color: white;
+  padding: 20px;
+}
+
+.cont a {
+  color: white;
+  text-decoration: none;
+}
+.copy-right{
+  display: inline-block;
+  text-align: center;
+}

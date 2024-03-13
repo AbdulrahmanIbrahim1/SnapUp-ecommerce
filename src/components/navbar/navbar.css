@@ -1,0 +1,44 @@
+.sidebar-show-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.cart-nav {
+  position: relative;
+}
+.cart-nav:hover .cart-modal {
+  display: block;
+}
+
+.cart-nav .cart-ico {
+  color: white;
+  padding: 10px;
+  margin-left: 5px;
+  font-size: 30px;
+}
+
+.cart-value {
+  padding: 1px;
+  min-width: 20px;
+  min-height: 20px;
+  text-decoration: none;
+  color: orangered;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: -7px;
+  right: 0px;
+}
+
+@media (max-width:900px) {
+  .cont-center {
+    width: 50%;
+  }
+
+  .cat {
+    overflow-x: auto;
+    width: 100%;
+  }
+}

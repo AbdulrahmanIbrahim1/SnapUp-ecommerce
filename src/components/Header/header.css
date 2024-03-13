@@ -1,0 +1,44 @@
+.bg-orange {
+  background-color: orangered;
+}
+
+.navbar-nav li {
+  /* margin: 5px 10px; */
+  font-size: 14px !important;
+}
+
+.navbar-brand {
+  font-size: 18px !important;
+  font-weight: 100;
+}
+
+@media (max-width:991px) {
+  .left-navbar {
+    width: 70% !important;
+    /* display: flex; */
+    font-size: small;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+
+  .left-navbar ul li {
+    width: 10% !important;
+  }
+}
+
+.str-line {
+  width: 100%;
+  height: 1px;
+  background-color: aliceblue;
+}
+
+@media (max-width:900px) {
+  .left-navbar {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .vert-line {
+    display: none;
+  }
+}

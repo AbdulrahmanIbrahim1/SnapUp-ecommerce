@@ -1,0 +1,41 @@
+.old-price {
+  text-decoration: line-through;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.new-price {
+  font-weight: bold;
+  border-bottom: 2px orangered solid;
+}
+
+.discount {
+  color: red;
+}
+
+.category {
+  background-color: orangered;
+  /* padding: 10px 20px; */
+  width: 50%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+}
+
+.my-card {
+  height: 100% !important;
+  padding-bottom: 5px;
+  box-shadow: 0 0 6px 4px #e4e4e4;
+}
+
+.product-item {
+  height: 100% !important;
+}
