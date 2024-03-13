@@ -13,6 +13,7 @@ body {
   padding: 15px;
   transform: translateX(0);
   z-index: 5;
+  position: fixed;
 }
 
 
@@ -61,5 +62,5 @@ body {
   .my-aside {
     width: 70%;
   }
-  
+
 }
