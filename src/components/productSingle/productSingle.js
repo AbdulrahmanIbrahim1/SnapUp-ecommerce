@@ -26,7 +26,7 @@ function ProductSingle() {
       }, 2000)
     }
     console.log("cartMessageStatus ", cartMessageStatus);
-  }, [dispatch,cartMessageStatus])
+  }, [dispatch,cartMessageStatus,id])
   // console.log("single product is : ", product);
   let discount = (product.price) - (product.price * (product.discountPercentage / 100))
   if (productSingleSatatus === STATUS.LOADING) {
