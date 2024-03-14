@@ -25,7 +25,7 @@ function ProductSingle() {
         dispatch(setCartMessageOff())
       }, 2000)
     }
-    console.log("cartMessageStatus ", cartMessageStatus);
+    // console.log("cartMessageStatus ", cartMessageStatus);
   }, [dispatch,cartMessageStatus,id])
   // console.log("single product is : ", product);
   let discount = (product.price) - (product.price * (product.discountPercentage / 100))

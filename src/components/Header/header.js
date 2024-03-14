@@ -29,10 +29,10 @@ function Header() {
                 Follow us on
               </span>
               <ul className='social-links d-flex align-items-center ps-0'>
-                <a href='https://www.facebook.com/'>
+                <a href='https://www.facebook.com/Body2024' target="_blank" rel="noreferrer" >
                   <i className="mx-2 fa-brands fa-facebook text-white"></i>
                 </a>
-                <a href='https://www.instagram.com/?hl=ar'>
+                <a href='https://www.instagram.com/__abdo__ibrahim/?hl=ar' target="_blank" rel="noreferrer">
                   <i className="mx-2 fa-brands fa-instagram text-white"></i>
                 </a>
               </ul>
@@ -57,14 +57,14 @@ function Header() {
               </Link>
             </Nav>
           </Navbar.Collapse>
-        </Container>
+        </Container >
         <Container>
           <hr className='str-line' />
         </Container>
         <Container>
           <NavbarApp />
         </Container>
-      </Navbar>
+      </Navbar >
     </>
   );
 }

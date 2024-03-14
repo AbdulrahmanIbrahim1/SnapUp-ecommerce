@@ -5,6 +5,18 @@
 .check-btn {
   width: 100%;
 }
-.text-red{
+
+.text-red {
   color: red;
+}
+
+.table {
+  max-width: 100% !important;
+}
+
+.my-tr0 {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

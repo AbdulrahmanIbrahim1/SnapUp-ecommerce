@@ -10,8 +10,8 @@ import { formatPrice } from "../../utils/helpers";
 function CartPage() {
   const dispatch = useDispatch()
   const carts = useSelector(getAllCarts)
-  const { itemsCount, totalAmount } = useSelector((state) => state.cart)
-  console.log("itemCount : ", itemsCount, "  totalAmount :  ", totalAmount);
+  const { itemCount, totalAmount } = useSelector((state) => state.cart)
+  console.log("itemCount : ", itemCount, "  totalAmount :  ", totalAmount);
   if (carts.length === 0) {
     return (
       <>
@@ -28,12 +28,12 @@ function CartPage() {
 
   return (
     <>
-      <Container >
+      <Container style={{ overflowX: "auto" }} >
 
-        <table className="table tabled-dark table-hover">
+        <table className="table img-fluid tabled-dark table-hover">
 
           <thead>
-            <tr>
+            <tr className="my-tr">
               <th>S.N</th>
               <th>Product</th>
               <th>UnitPrice</th>
@@ -46,7 +46,7 @@ function CartPage() {
             {
               carts.map((cart, index) => {
                 return (
-                  <tr key={cart.id}>
+                  <tr className="my-tr" key={cart.id}>
                     <td>{index + 1}</td>
                     <td>{cart.title}</td>
                     <td>{formatPrice(cart.discountedPrice)}</td>
@@ -83,7 +83,7 @@ function CartPage() {
           <div className="c-f-left p-4">
             <div className="c-f-txt my-2">
               <div>
-                total ({itemsCount}) items : <span className="text-orange fw-bold">{formatPrice(totalAmount)}</span>
+                total ({itemCount}) items : <span className="text-orange fw-bold">{formatPrice(totalAmount)}</span>
               </div>
             </div>
             <button className="btn bg-orange text-white check-btn" >Check Out</button>

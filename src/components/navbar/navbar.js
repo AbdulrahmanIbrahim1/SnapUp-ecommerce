@@ -22,7 +22,7 @@ function NavbarApp() {
   }, [dispatch])
   useEffect(() => {
     dispatch(getCartTotal())
-  }, [carts,dispatch])
+  }, [carts, dispatch])
   return (
     <>
       {/* <Navbar> */}
@@ -65,7 +65,7 @@ function NavbarApp() {
         </ul>
       </div>
       <div className="cart-nav">
-        <Link to={"/cart"} className=" text-decoration-none">
+        <Link to={""} className=" text-decoration-none">
           <i className=" cart-ico fa-solid fa-cart-arrow-down"></i>
           <div className="cart-value">{itemCount}</div>
           <CartModal carts={carts} />

@@ -9,7 +9,7 @@ body {
   left: 0;
   max-height: 50vh;
   width: 25%;
-  transition: 2s;
+  transition: .5s;
   padding: 15px;
   transform: translateX(0);
   z-index: 5;
@@ -63,4 +63,8 @@ body {
     width: 70%;
   }
 
+}
+
+.cat-lis-link {
+  color: orangered !important;
 }

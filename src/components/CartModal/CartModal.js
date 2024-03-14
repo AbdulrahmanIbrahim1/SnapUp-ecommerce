@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { shopping_cart } from "../../utils/images";
 import './cartmodal.css'
 
@@ -26,9 +27,9 @@ function CartModal({ carts }) {
                 )
               })
             }
-            <div className="btn bg-oragne">
+            <Link to={"/cart"} className="btn bg-oragne">
               View My Shopping Cart
-            </div>
+            </Link>
           </div>) : (
             <div>
               <img src={shopping_cart} alt="" className="img-fluid empty-img" />

@@ -13,6 +13,13 @@ export const fetchAsyncCategories = createAsyncThunk('categories/fetch', async (
   // console.log(data);
   return data;
 })
+export const fetchProductOfCateory = createAsyncThunk('productsOfCategory/fetch', async (cat) => {
+  const res = await fetch(`https://dummyjson.com/products/category/${cat}`);
+  const data = await res.json()
+  console.log("product cat is : ",data);
+  return data;
+})
+
 
 const CategorySlice = createSlice({
   name: 'category',
@@ -29,11 +36,17 @@ const CategorySlice = createSlice({
     builder.addCase(fetchAsyncCategories.rejected, (state, action) => {
       state.categoriesStatus = STATUS.FAILD
     })
+    builder.addCase(fetchProductOfCateory.fulfilled,(state ,action)=>{
+      state.categoryProduct=action.payload
+      state.categoryProductStatus=STATUS.SUCCEEDED
+    })
+    
   }
 
 })
 
 export const getAllCategories = (state) => state.category.categories
+export const grtAllProductCat = (state) => state.category.categoryProduct
 
 export default CategorySlice.reducer;
 

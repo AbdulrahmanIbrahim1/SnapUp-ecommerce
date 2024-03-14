@@ -6,7 +6,7 @@ function Product({ product }) {
   // console.log(product?.id);
   return (
     <>
-      <Link to={`/products/${product?.id}`} key={product?.id} className=" col-lg-3 col-md-4 text-decoration-none">
+      <Link to={`/products/${product?.id}`} key={product?.id} className=" col-lg-3 col-md-4 col-6 text-decoration-none">
         <div className="product-item py-2 justify-content-center ">
           <div className="card my-card d-flex justify-content-center">
             <div className="category">
