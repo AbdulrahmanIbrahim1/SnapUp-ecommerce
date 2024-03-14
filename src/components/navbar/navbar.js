@@ -65,11 +65,11 @@ function NavbarApp() {
         </ul>
       </div>
       <div className="cart-nav">
-        <Link to={""} className=" text-decoration-none">
+        <div to={"/"} className=" text-decoration-none cursor-pointer" >
           <i className=" cart-ico fa-solid fa-cart-arrow-down"></i>
           <div className="cart-value">{itemCount}</div>
           <CartModal carts={carts} />
-        </Link>
+        </div>
       </div>
       {/* </div> */}
       {/* </Navbar> */}

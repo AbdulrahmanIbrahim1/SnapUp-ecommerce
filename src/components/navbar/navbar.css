@@ -6,6 +6,7 @@
 .cart-nav {
   position: relative;
 }
+
 .cart-nav:hover .cart-modal {
   display: block;
 }
@@ -41,4 +42,8 @@
     overflow-x: auto;
     width: 100%;
   }
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

@@ -15,10 +15,14 @@ function CategoryProduct() {
   useEffect(() => {
     dispatch(fetchProductOfCateory(cat))
   }, [dispatch, cat])
-  console.log("productsCat : ", productsCat.products);
+  // console.log("productsCat : ", productsCat.products);
+  console.log(cat);
   return (
     <>
       <Container >
+        <div className="main-title my-4">
+          <h3>see our {cat}</h3>
+        </div>
         <ProductList allProducts={productsCat.products} />
       </Container>
       {/* <Loader /> */}

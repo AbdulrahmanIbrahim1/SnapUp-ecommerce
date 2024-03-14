@@ -33,7 +33,7 @@ function Sidebar() {
             {
               categories.map((cat, id) => {
                 return (
-                  <li className='list-group-item text-capitalize  ' key={id}>
+                  <li className='list-group-item text-capitalize  ' onClick={() => dispatch(setSidebarOff())} key={id}>
                     <Link to={`category/${cat}`} className='cat-lis-link text-decoration-none balck-text'>{cat.replace("-", " ")}</Link>
                   </li>
                 )
