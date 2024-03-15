@@ -3,7 +3,7 @@ import Myslider from "../slider/slider";
 import './home.css'
 import { useDispatch, useSelector } from "react-redux";
 // import { getAllCategories } from "../../store/categorySlice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { fetchProducts, getAllProducts, getAllProductsStats } from "../../store/productSlice";
 import { STATUS } from "../../utils/status";
 import Loader from "../loader/loader";
@@ -40,44 +40,54 @@ function Home() {
   let catProductsThree = products.filter(product => product.category === categories[2]);
   let catProductsFour = products.filter(product => product.category === categories[3]);
 
+  const [grid, setgrid] = useState(true)
   return (<>
     <main>
       <Myslider />
+
       <div className="main-content">
         <Container >
+          <div className="display my-2">
+            <button className="btn  bg-orange text-white  mx-3 " onClick={() => setgrid(true)} >
+              <i className="fa-solid fa-grip-vertical fs-4 p-2"></i>
+            </button>
+            <button className="btn bg-orange text-white mx-3" onClick={()=>setgrid(false)} >
+              <i className="fa-solid fa-grip-lines fs-4 p-2" ></i>
+            </button>
+          </div>
           <div className="categories py-5">
             <div className="cat-item">
               <div className="main-title">
                 <h3>see our products</h3>
               </div>
-              {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={tempProducts} />}
+              {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={tempProducts} grid={grid} />}
             </div>
             <div className='cat-item'>
               <div className='main-title'>
                 <h3>{categories[0]}</h3>
               </div>
-              {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={catProductsOne} />}
+              {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={catProductsOne} grid={grid} />}
             </div>
 
             <div className='cat-item'>
               <div className='main-title'>
                 <h3>{categories[1]}</h3>
               </div>
-              {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={catProductsTwo} />}
+              {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={catProductsTwo} grid={grid} />}
             </div>
 
             <div className='cat-item'>
               <div className='main-title'>
                 <h3>{categories[2]}</h3>
               </div>
-              {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={catProductsThree} />}
+              {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={catProductsThree} grid={grid} />}
             </div>
 
             <div className='cat-item'>
               <div className='main-title'>
                 <h3>{categories[3]}</h3>
               </div>
-              {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={catProductsFour} />}
+              {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={catProductsFour} grid={grid} />}
             </div>
           </div>
         </Container>

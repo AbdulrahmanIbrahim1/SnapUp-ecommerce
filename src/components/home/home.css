@@ -14,3 +14,8 @@
   height: 100%;
   background-color: orangered;
 }
+
+.display button:hover {
+  background-color: white !important;
+  color: orangered !important;
+}
