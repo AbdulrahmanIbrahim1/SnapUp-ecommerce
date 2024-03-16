@@ -30,7 +30,7 @@ function App() {
           <Route path='/products/:id' element={<ProductSingle />} />
           <Route path='/category/:cat' element={<CategoryProduct />} />
           <Route path='/cart' element={<CartPage />} />
-          <Route path='/search/:search' element={<Search />} />
+          <Route path='/search/:searchTerm' element={<Search />} />
         </Routes>
         <Myfooter />
       </Provider>

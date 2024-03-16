@@ -5,7 +5,7 @@ import { setSidebarOn } from "../../store/sidebarSlice";
 import { useDispatch, useSelector } from "react-redux";
 // import { getSidebarStatus } from "../../store/sidebarSlice";
 import { fetchAsyncCategories, getAllCategories } from "../../store/categorySlice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getAllCarts, getCartItemCount, getCartTotal } from "../../store/cartSlice";
 import CartModal from "../CartModal/CartModal";
 
@@ -23,6 +23,15 @@ function NavbarApp() {
   useEffect(() => {
     dispatch(getCartTotal())
   }, [carts, dispatch])
+  //for search
+  const [searchTerm, setSearchTerm] = useState("")
+  const handelSearch = (e) => {
+    e.preventDefault()
+    setSearchTerm(e.target.value)
+    setTimeout(()=>{
+      e.target.value=" "
+    },2000)
+  }
   return (
     <>
       {/* <Navbar> */}
@@ -46,8 +55,8 @@ function NavbarApp() {
       <div className="cont-center flex-fill d-flex flex-column ">
         <div className="search-box  flex-fill">
           <div className="input-group ">
-            <input type="text" className="form-control" placeholder="Search Your preferred item here" aria-label="Recipient's username" aria-describedby="button-addon2" />
-            <Link to="/" className="btn btn-outline-secondary" type="button" id="button-addon2">
+            <input type="text" className="form-control" onChange={(e) => handelSearch(e)} placeholder="Search Your preferred item here" aria-label="Recipient's username" aria-describedby="button-addon2" />
+            <Link to={`search/${searchTerm}`} className="btn btn-outline-secondary" type="button" id="button-addon2">
               <i className="fa-solid fa-magnifying-glass"></i>
             </Link>
           </div>

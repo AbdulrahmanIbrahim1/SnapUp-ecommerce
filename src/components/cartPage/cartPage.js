@@ -15,11 +15,11 @@ function CartPage() {
   if (carts.length === 0) {
     return (
       <>
-        <Container >
+        <Container style={{ minHeight: "70vh" }} >
           <div className="empty-cart">
             <img src={shopping_cart} alt="" />
             <span >Your shopping cart is empty</span>
-            <Link to={"/"} className="btn bg-orange mx-4"  >Go To shopping Now</Link>
+            <Link to={"/"} className="btn bg-orange mx-4 text-white"  >Go To shopping Now</Link>
           </div>
         </Container>
       </>
@@ -28,7 +28,7 @@ function CartPage() {
 
   return (
     <>
-      <Container style={{ overflowX: "auto" }} >
+      <Container style={{ overflowX: "auto", minHeight: "70vh" }} >
 
         <table className="table img-fluid tabled-dark table-hover">
 
