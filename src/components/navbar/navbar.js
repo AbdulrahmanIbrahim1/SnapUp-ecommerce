@@ -30,7 +30,7 @@ function NavbarApp() {
     setSearchTerm(e.target.value)
     setTimeout(()=>{
       e.target.value=" "
-    },2000)
+    },5000)
   }
   return (
     <>
