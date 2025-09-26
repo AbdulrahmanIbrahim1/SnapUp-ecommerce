@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { getAllCarts, getCartItemCount, getCartTotal } from "../../store/cartSlice";
 import CartModal from "../CartModal/CartModal";
 
+
 function NavbarApp() {
   const carts = useSelector(getAllCarts)
   const itemCount = useSelector(getCartItemCount)
@@ -28,9 +29,9 @@ function NavbarApp() {
   const handelSearch = (e) => {
     e.preventDefault()
     setSearchTerm(e.target.value)
-    setTimeout(()=>{
-      e.target.value=" "
-    },5000)
+    setTimeout(() => {
+      e.target.value = " "
+    }, 5000)
   }
   return (
     <>
@@ -66,7 +67,14 @@ function NavbarApp() {
             categories.slice(0, 8).map((cat, idx) => {
               return (
                 <li className="nav-item navbar-nav mx-2" key={idx}>
-                  <Link to={`category/${cat}`} className="text-decoration-none text-white text-uppercase" >{cat.replace("-", " ")} </Link>
+                  {/* <Link to={`category/${cat}`} className="text-decoration-none text-white text-uppercase" >{cat.replace("-", " ")} </Link> */}
+                  <Link
+                    to={`category/${cat.slug}`}
+                    className="text-decoration-none text-white text-uppercase"
+                  >
+                    {cat.name.replace("-", " ")}
+                  </Link>
+
                 </li>
               )
             })

@@ -14,27 +14,30 @@ import Loader from './components/loader/loader';
 import Search from './components/Search/Search';
 import Myfooter from './components/footer/footer';
 import CartPage from './components/cartPage/cartPage';
+import ErrorBoundary from './ErrorBoundary';
 
 
 
 function App() {
   return (
-    <div className="App">
-      <Provider store={store}>
-        <div style={{ textAlign: "center", color: "red" }}>The site is under modification </div>
-        <Loader />
-        <Header />
-        <Sidebar />
-        <Routes>
-          <Route path='' element={<Home />} />
-          <Route path='/products/:id' element={<ProductSingle />} />
-          <Route path='/category/:cat' element={<CategoryProduct />} />
-          <Route path='/cart' element={<CartPage />} />
-          <Route path='/search/:searchTerm' element={<Search />} />
-        </Routes>
-        <Myfooter />
-      </Provider>
-    </div>
+    <ErrorBoundary>
+      <div className="App">
+        <Provider store={store}>
+          <div style={{ textAlign: "center", color: "red" }}>The site is under modification </div>
+          <Loader />
+          <Header />
+          <Sidebar />
+          <Routes>
+            <Route path='' element={<Home />} />
+            <Route path='/products/:id' element={<ProductSingle />} />
+            <Route path='/category/:cat' element={<CategoryProduct />} />
+            <Route path='/cart' element={<CartPage />} />
+            <Route path='/search/:searchTerm' element={<Search />} />
+          </Routes>
+          <Myfooter />
+        </Provider>
+      </div>
+    </ErrorBoundary>
   );
 }
 

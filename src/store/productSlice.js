@@ -57,6 +57,7 @@ export const getAllProducts = (state) => state.product.products;
 export const getAllProductsStats = (state) => state.product.productsStatus
 export const getSingleProducts = (state) => state.product.productSingle
 export const getSingleProductsStatus = (state) => state.product.productSingleStatus
+export const getSingleProductsStatuss = (state) => state
 export { }
 
 

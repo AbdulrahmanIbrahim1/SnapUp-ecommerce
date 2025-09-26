@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import './sidebar.css'
 import { getSidebarStatus, setSidebarOff } from '../../store/sidebarSlice';
+// eslint-disable-next-line no-unused-vars
 import { Link } from 'react-router-dom';
 import { fetchAsyncCategories, getAllCategories } from '../../store/categorySlice';
 import { useEffect } from 'react';
@@ -34,7 +35,14 @@ function Sidebar() {
               categories.map((cat, id) => {
                 return (
                   <li className='list-group-item text-capitalize  ' onClick={() => dispatch(setSidebarOff())} key={id}>
-                    <Link to={`category/${cat}`} className='cat-lis-link text-decoration-none balck-text'>{cat.replace("-", " ")}</Link>
+                    {/* <Link to={`category/${cat}`} className='cat-lis-link text-decoration-none balck-text'>{cat.replace("-", " ")}</Link> */}
+                    <Link
+                      to={`category/${cat.slug}`}
+                      className='cat-lis-link text-decoration-none balck-text'
+                    >
+                      {cat.name.replace("-", " ")}
+                    </Link>
+
                   </li>
                 )
               })

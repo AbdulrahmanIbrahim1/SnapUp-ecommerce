@@ -13,6 +13,11 @@ import { getAllCategories } from "../../store/categorySlice";
 
 function Home() {
   const categories = useSelector(getAllCategories)
+
+  // ===========================tstsscategories =========================
+
+  
+  
   const dispatch = useDispatch()
   // const categories = useSelector(getAllCategories)
   const productStatus = useSelector(getAllProductsStats)
@@ -40,6 +45,12 @@ function Home() {
   let catProductsThree = products.filter(product => product.category === categories[2]);
   let catProductsFour = products.filter(product => product.category === categories[3]);
 
+  console.log("############################".repeat(50));
+  console.log("final categories test test ");
+  console.log("Categories test test is ",typeof (products[0]) );
+  console.log("Categories test test is ", products[0] );
+  
+
   const [grid, setgrid] = useState(true)
   return (<>
     <main>
@@ -64,28 +75,28 @@ function Home() {
             </div>
             <div className='cat-item'>
               <div className='main-title'>
-                <h3>{categories[0]}</h3>
+                {/* <h3>{categories[0]}</h3> */}
               </div>
               {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={catProductsOne} grid={grid} />}
             </div>
 
             <div className='cat-item'>
               <div className='main-title'>
-                <h3>{categories[1]}</h3>
+                {/* <h3>{categories[1]}</h3> */}
               </div>
               {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={catProductsTwo} grid={grid} />}
             </div>
 
             <div className='cat-item'>
               <div className='main-title'>
-                <h3>{categories[2]}</h3>
+                {/* <h3>{categories[2]}</h3> */}
               </div>
               {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={catProductsThree} grid={grid} />}
             </div>
 
             <div className='cat-item'>
               <div className='main-title'>
-                <h3>{categories[3]}</h3>
+                {/* <h3>{categories[3]}</h3> */}
               </div>
               {productStatus === STATUS.LOADING ? <Loader /> : <ProductList allProducts={catProductsFour} grid={grid} />}
             </div>

@@ -9,7 +9,7 @@ import Loader from "../loader/loader";
 import ProductList from "../productList/productList";
 
 function Search() {
-  const { searchTerm } = useParams()
+  const { searchTerm } = useParams()  
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(clearSearch())
