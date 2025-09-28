@@ -23,8 +23,8 @@ function App() {
     <ErrorBoundary>
       <div className="App">
         <Provider store={store}>
-          <div style={{ textAlign: "center", color: "red" }}>The site is under modification </div>
-          <Loader />
+          {/* <div style={{ textAlign: "center", color: "red" }}>The site is under modification </div>
+          <Loader /> */}
           <Header />
           <Sidebar />
           <Routes>
